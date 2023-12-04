@@ -10,7 +10,7 @@ app.use("/news", require("./Routes/News"));
 
 app.use("/weather", require("./Routes/Weather"));
 
-app.use("/movieGener", require("./Routes/movieGener"));
+app.use("/movieGenre", require("./Routes/movieGenre"));
 
 app.use("/movieList", require("./Routes/movieList"));
 
