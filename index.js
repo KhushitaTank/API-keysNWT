@@ -14,6 +14,11 @@ app.use("/movieGenre", require("./Routes/movieGenre"));
 
 app.use("/movieList", require("./Routes/movieList"));
 
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://super-app-three-sepia.vercel.app",
+  })
+);
 
 app.listen(PORT, () => console.log(`server running on port ${PORT}`));

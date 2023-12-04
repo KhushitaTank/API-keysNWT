@@ -10,6 +10,7 @@ const API_KEY_VALUE_MOVIELIST = process.env.API_KEY_VALUE_MOVIELIST;
 
 router.get("/", async (req, res) => {
   try {
+    res.header("Access-Control-Allow-Origin", "*");
     const params = new URLSearchParams({
       [API_KEY_MOVIELIST]: API_KEY_VALUE_MOVIELIST,
       ...url.parse(req.url, true).query,

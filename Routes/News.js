@@ -8,6 +8,7 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE;
 
 router.get("/", async (req, res) => {
   try {
+    res.header("Access-Control-Allow-Origin", "*");
     const apiRes = await needle(
       "get",
       `${API_BASE_URL}${API_KEY_NAME}=${API_KEY_VALUE}`
